@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorInterval="60">
+    <Properties>
+        <Property name="LOG_PATTERN">
+            %d{yyyy-MM-dd HH:mm:ss} [%thread] [correlationId=%X{correlationId}] %-5level %logger{36} - %msg%n
+        </Property>
+        <Property name="LOG_BASE_PATH">
+            E:\\Project\\logs
+        </Property>
+    </Properties>
+    <Appenders>
+        <Console name="Console-Appender" target="SYSTEM_OUT">
+            <PatternLayout>
+                <pattern>${LOG_PATTERN}</pattern>
+            </PatternLayout>
+        </Console>
+        <RollingFile name="App-File-Appender" fileName="${LOG_BASE_PATH}/erp.log"
+                     filePattern="${LOG_BASE_PATH}/archive/erp.log-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout>
+                <Pattern>${LOG_PATTERN}</Pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="512 MB"/>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+        <RollingFile name="RequestResponseFile" fileName="${LOG_BASE_PATH}/erp-req-res.log"
+			filePattern="${LOG_BASE_PATH}/archive/erp-req-res-%d{yyyy-MM-dd}-%i.log">
+			<PatternLayout>
+				<pattern>%d [%t] %p %c - %m%n</pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1"
+					modulate="true" />
+				<SizeBasedTriggeringPolicy size="500 MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="10" />
+		</RollingFile>
+    </Appenders>
+    <Loggers>
+        <Logger name="com.jcb.erp" level="info" additivity="false">
+            <AppenderRef ref="Console-Appender"/>
+            <AppenderRef ref="App-File-Appender"/>
+       	</Logger>
+       	
+       	<!-- Logger to log request response by service client 
+		<Logger name="com.jcb.erp.adapters" level="info" additivity="false">
+			<AppenderRef ref="Console-Appender"/>
+            <AppenderRef ref="App-File-Appender"/>
+		</Logger>-->
+        <Root level="info">
+            <AppenderRef ref="Console-Appender"/>
+            <AppenderRef ref="App-File-Appender"/>
+        </Root>
+    </Loggers>
+</Configuration>
+
