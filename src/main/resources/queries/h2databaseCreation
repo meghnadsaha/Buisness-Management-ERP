@@ -1,0 +1,30 @@
+C:\Users\M9014146\.m2\repository\com\h2database\h2\1.4.200>java -cp h2-1.4.200.jar org.h2.tools.Shell
+
+Welcome to H2 Shell 1.4.200 (2019-10-14)
+Exit with Ctrl+C
+[Enter]   jdbc:h2:~/test
+URL       jdbc:h2:~/test
+[Enter]   org.h2.Driver
+Driver    org.h2.Driver
+[Enter]
+User      sa
+Password
+Type the same password again to confirm database creation.
+Password
+Connected
+Commands are case insensitive; SQL statements end with ';'
+help or ?      Display this help
+list           Toggle result list / stack trace mode
+maxwidth       Set maximum column width (default is 100)
+autocommit     Enable or disable autocommit
+history        Show the last 20 statements
+quit or exit   Close the connection and exit
+
+sql> select * from users
+...> Aborted
+Connection closed
+
+C:\Users\M9014146\.m2\repository\com\h2database\h2\1.4.200>java -jar h2-1.4.200.jar -baseDir ~/
+Web Console server running at http://192.168.0.106:8082?key=897851bcfc80edb47363a89db1340757627176bb6252bf9bc7a71577f9274267 (only local connections)
+TCP server running at tcp://192.168.0.106:9092 (only local connections)
+PG server running at pg://192.168.0.106:5435 (only local connections)
