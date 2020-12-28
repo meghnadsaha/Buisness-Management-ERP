@@ -26,29 +26,18 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-//@DynamicUpdate
+@DynamicUpdate
 @Table(name = "USERS")
-// @JsonInclude(JsonInclude.Include.NON_EMPTY)
-
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-
 public class Users {
 
-
-
 	@Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long id;
-	
-	public Users(String username, String password) {
-		super();
-		this.username = username;
-		this.password = password;
-	}
 
 	@Column(name = "USER_NAME")
 	private String username;
