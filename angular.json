@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Buisness-Management-ERP-UI"
+    }
+  },
+  "defaultProject": "Buisness-Management-ERP-UI",
+  "cli": {
+    "analytics": false
+  }
 }

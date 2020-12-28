@@ -10,11 +10,16 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
 import { Routes, RouterModule } from '@angular/router';
 import { EmployeeInventoryDetailsComponent } from './employee-inventory-details/employee-inventory-details.component';
+import { EmployeeInventoryDetailsListComponent } from './_components/employee-inventory-details-list/employee-inventory-details-list.component';
+import { EmployeeInventoryDetailsEditComponent } from './_components/employee-inventory-details-edit/employee-inventory-details-edit.component';
 
 
 const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'inventory', component: EmployeeInventoryDetailsComponent },
+  { path: 'list-of-inventory', component: EmployeeInventoryDetailsListComponent },
+  { path: 'update-inventory/:id', component: EmployeeInventoryDetailsEditComponent },
+
   { path: '', redirectTo: '', pathMatch: 'full' }
 ];
 
@@ -22,7 +27,9 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     RegisterComponent,
-    EmployeeInventoryDetailsComponent
+    EmployeeInventoryDetailsComponent,
+    EmployeeInventoryDetailsListComponent,
+    EmployeeInventoryDetailsEditComponent
   ],
   imports: [
     BrowserModule,
