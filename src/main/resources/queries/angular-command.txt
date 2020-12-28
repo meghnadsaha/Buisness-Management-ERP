@@ -1,0 +1,11 @@
+npm install -g @angular/cli
+ng serve --open
+npm install --save-dev @angular-devkit/build-angular
+
+Add services
+==============================================================
+ng generate service employee-inventory-details
+
+Add Components
+===============================================================
+ng generate component _components/employee-inventory-details-list

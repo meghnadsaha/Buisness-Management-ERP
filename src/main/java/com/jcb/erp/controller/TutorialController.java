@@ -23,8 +23,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.jcb.erp.model.Tutorial;
 import com.jcb.erp.repository.TutorialRepository;
 
-@CrossOrigin(origins = "http://localhost:8888")
 @RestController
+@CrossOrigin(origins = "http://localhost:4200" ,allowedHeaders = "*",allowCredentials = "true")
 @RequestMapping("/erp_api/test")
 public class TutorialController {
 
@@ -33,7 +33,7 @@ public class TutorialController {
 	@Autowired
 	TutorialRepository tutorialRepository;
 
-	@GetMapping("/tutorials")
+	@GetMapping("/fetch-by-title")
 	public ResponseEntity<List<Tutorial>> getAllTutorials(@RequestParam(required = false) String title) {
 		try {
 			List<Tutorial> tutorials = new ArrayList<Tutorial>();
