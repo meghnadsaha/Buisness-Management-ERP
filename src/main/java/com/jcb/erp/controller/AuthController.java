@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,6 +23,7 @@ import com.jcb.erp.dto.requests.ClientCreateRequest;
 import com.jcb.erp.dto.response.VechileManagementResponse;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200" ,allowedHeaders = "*",allowCredentials = "true")
 @RequestMapping("/erp_api/auth")
 public class AuthController {
 
