@@ -1,0 +1,192 @@
+<div class="container docs-example-viewer-body docs-example-viewer-wrapper">
+
+<div class="row ">
+
+
+  <div class="col-md-5">
+
+    <form  *ngIf="!isSuccessful"
+            name="form"
+            (ngSubmit)="f.form.valid && onSubmit()"
+            #f="ngForm"
+            novalidate class="row was-validated">
+      
+            <div class="col-md-6">
+              <div class="form-group">
+    
+                <label>Driver No</label>
+                <input 
+                type="text"
+                class="form-control"
+                name="driver_no"
+                [(ngModel)]="form.driver_no"
+                required
+                minlength="3"
+                maxlength="20"
+                #driver_no="ngModel">
+        
+                <div class="invalid-feedback" *ngIf="f.submitted && driver_no.invalid">
+                  <div *ngIf="driver_no.errors.required">Driver No is required</div>
+                  <div *ngIf="driver_no.errors.minlength">
+                    driver_no must be at least 3 characters
+                  </div>
+                  <div *ngIf="driver_no.errors.maxlength">
+                    driver_no must be at most 20 characters
+                  </div>
+                </div>
+            </div>
+        
+            <div class="form-group">
+                <label>Salary</label>
+                <input 
+                type="text"
+                class="form-control"
+                name="salary"
+                [(ngModel)]="form.salary"
+                required
+                minlength="8"
+                maxlength="20"
+                #salary="ngModel">
+        
+                <div class="invalid-feedback" *ngIf="f.submitted && salary.invalid">
+                  <div *ngIf="salary.errors.required"> is required</div>
+                  <div *ngIf="salary.errors.minlength">
+                    Salary must be at least 8 characters
+                  </div>
+                  <div *ngIf="salary.errors.maxlength">
+                    Salary must be at most 20 characters
+                  </div>
+                </div>
+            </div>
+            
+            
+             <div class="form-group">
+                <label>Date Of Joining</label>
+                <input
+                type="date"
+                class="form-control" 
+                name="date_of_joining"
+                [(ngModel)]="form.date_of_joining"
+                required
+              
+                #date_of_joining="ngModel">
+        
+                <div class="invalid-feedback" *ngIf="f.submitted && date_of_joining.invalid">
+                  <div *ngIf="date_of_joining.errors.required">Date Of Joining is required</div>
+             
+                </div>
+             </div>
+        
+            <div class="form-group">
+                <label>Date Of Salary Initiation</label>
+                <input
+                type="date"
+                class="form-control"
+                name="date_of_salary_initiation" 
+                [(ngModel)]="form.date_of_salary_initiation"
+                required
+                #date_of_salary_initiation="ngModel"
+                >
+        
+                <div class="invalid-feedback" *ngIf="f.submitted && date_of_salary_initiation.invalid">
+                  <div *ngIf="date_of_salary_initiation.errors.required">Date Of Salary Initiation is required</div>
+                  
+                </div>
+            </div>
+        
+             
+        
+        
+    
+            </div>
+            <div class="col-md-6">
+    
+              <div class="form-group">
+                <label>Food Expenses</label>
+                <input
+                type="text"
+                class="form-control"
+                name="food_expenses"
+                [(ngModel)]="form.food_expenses"
+                required
+                minlength="3"
+                maxlength="20"
+                #food_expenses="ngModel"    
+                id="food_expenses">
+        
+                <div class="invalid-feedback" *ngIf="f.submitted && food_expenses.invalid">
+                  <div *ngIf="food_expenses.errors.required">Food Expenses is required</div>
+                  <div *ngIf="food_expenses.errors.minlength">
+                    Food Expenses must be at least 3 characters
+                  </div>
+                  <div *ngIf="food_expenses.errors.maxlength">
+                    Food Expenses must be at most 20 characters
+                  </div>
+                </div>
+             </div>
+        
+    
+              <div class="form-group">
+                <label>Yearly Bonus</label>
+                <input 
+                type="text"
+                class="form-control"
+                name="yearly_bonus" 
+                [(ngModel)]="form.yearly_bonus"
+                required
+                minlength="3"
+                maxlength="20"
+                #yearly_bonus="ngModel"
+                id="yearly_bonus">
+        
+                <div class="invalid-feedback" *ngIf="f.submitted && yearly_bonus.invalid">
+                  <div *ngIf="yearly_bonus.errors.required">Yearly Bonus is required</div>
+                  <div *ngIf="yearly_bonus.errors.minlength">
+                    Yearly Bonus must be at least 3 characters
+                  </div>
+                  <div *ngIf="yearly_bonus.errors.maxlength">
+                    Yearly Bonus must be at most 20 characters
+                  </div>
+                </div>
+            </div>
+    
+            </div>
+        
+         <div class="form-group">
+         <!--   <button class="btn btn-primary ">Submit</button>-->
+		    <button mat-raised-button color="primary">Submit</button>
+
+          </div>
+    
+          <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+            Signup failed!<br />{{ errorMessage }}
+          </div>
+    </form>
+    <div class="alert alert-success" *ngIf="isSuccessful">
+        Your registration is successful!
+      </div>
+    
+    </div>
+    
+    <div class="col-md-7 "> 
+      <div class="container">
+		<div class="mat-app-background basic-container">
+		  <app-table>loading</app-table>
+		</div>
+		
+      </div>
+    </div>
+	
+	<!--<div class="col-md-7">
+      <div class="container">
+        <img class="img-responsive" src="img_chania.jpg" alt="Chania" width="460" height="345">         
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe width="700" height="694" src="https://www.youtube.com/embed/mEnV6xkNaEM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>--->
+
+
+</div>
+
+</div>

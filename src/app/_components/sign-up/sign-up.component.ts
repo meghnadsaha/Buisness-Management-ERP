@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../_services/auth.service';
+import { Component, OnInit,Input} from '@angular/core';
+import { AuthService } from 'src/app/_services/auth.service';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  selector: 'app-sign-up',
+  templateUrl: './sign-up.component.html',
+  styleUrls: ['./sign-up.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class SignUpComponent implements OnInit {
   form: any = {};
   isSuccessful = false;
   isSignUpFailed = false;

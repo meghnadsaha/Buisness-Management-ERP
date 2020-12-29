@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { EmployeeInventoryService } from '../_services/employee-inventory.service';
+import { Component, OnInit ,Input} from '@angular/core';
+import { EmployeeInventoryService } from 'src/app/_services/employee-inventory.service';
 
 @Component({
-  selector: 'app-employee-inventory-details',
-  templateUrl: './employee-inventory-details.component.html',
-  styleUrls: ['./employee-inventory-details.component.css']
+  selector: 'app-employee-inventory-details-create',
+  templateUrl: './employee-inventory-details-create.component.html',
+  styleUrls: ['./employee-inventory-details-create.component.css']
 })
-export class EmployeeInventoryDetailsComponent implements OnInit {
+export class EmployeeInventoryDetailsCreateComponent  implements OnInit {
   form: any = {};
   isSuccessful = false;
   isSignUpFailed = false;
@@ -30,4 +30,5 @@ export class EmployeeInventoryDetailsComponent implements OnInit {
       }
     );
   }
+  
 }
