@@ -31,14 +31,14 @@ Run `npm install -g @angular/cli`
 Run `ng serve --open`
 Run `npm install --save-dev @angular-devkit/build-angular`
 
-##Add services
+## Add services
 Run `ng generate service employee-inventory-details-edit`
 
-##Add Components
+## Add Components
 Run `ng generate component _components/table`
 
-##Install Angular Material
-##Use the Angular CLI's install schematic to set up your Angular Material project by running the following command:
+## Install Angular Material
+## Use the Angular CLI's install schematic to set up your Angular Material project by running the following command:
 
 Run `ng add @angular/material`
 
