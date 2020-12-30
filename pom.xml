@@ -59,7 +59,7 @@
 			<artifactId>spring-security-crypto</artifactId>
 			<version>5.4.1</version>
 		</dependency>
-
+		<!-- Starter for using Log4j2 for logging. An alternative to spring-boot-starter-logging -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-log4j2</artifactId>
@@ -71,6 +71,7 @@
 			<artifactId>disruptor</artifactId>
 			<version>3.4.2</version>
 		</dependency>
+
 		<!-- .xls and .xlsx utility related mvn repository -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
