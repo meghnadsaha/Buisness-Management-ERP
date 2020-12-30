@@ -42,8 +42,15 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- <dependency> <groupId>org.springframework.security</groupId> <artifactId>spring-security-test</artifactId> 
-			<scope>test</scope> </dependency> -->
+		<!-- Spring Security is a powerful and highly customizable authentication 
+			and access-control framework. It is the de-facto standard for securing Spring-based 
+			applications. -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>4.2.20.RELEASE</version>
+		</dependency>
+
 		<!--Oracle database driver -->
 		<dependency>
 			<groupId>com.oracle</groupId>
@@ -94,8 +101,7 @@
 			<version>3.1.0</version>
 		</dependency>
 
-		<!-- 1. How to automate PDF form-filling 
-		     2. HTML to PDF Conversion -->
+		<!-- 1. How to automate PDF form-filling 2. HTML to PDF Conversion -->
 		<dependency>
 			<groupId>com.itextpdf</groupId>
 			<artifactId>itext7-core</artifactId>
