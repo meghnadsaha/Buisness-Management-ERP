@@ -5,7 +5,8 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class Test {
+public class AutomatePDFFormFillingUtilsTest {
+	
 	private static String html = "<input type=\"hidden\" name=\"sessionValidity\" value=\"2018-09-13T16:28:28Z\">\n"
 			+ "<input type=\"hidden\" name=\"shipBeforeDate\" value=\"2018-09-17\"> \n"
 			+ "<input type=\"hidden\" name=\"merchantReturnData\" value=\"\"> \n"

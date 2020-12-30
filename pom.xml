@@ -94,7 +94,8 @@
 			<version>3.1.0</version>
 		</dependency>
 
-		<!-- 1. How to automate PDF form-filling 2. HTML to PDF Conversion -->
+		<!-- 1. How to automate PDF form-filling 
+		     2. HTML to PDF Conversion -->
 		<dependency>
 			<groupId>com.itextpdf</groupId>
 			<artifactId>itext7-core</artifactId>
