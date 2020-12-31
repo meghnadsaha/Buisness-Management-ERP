@@ -1,0 +1,10 @@
+Run Spring Boot with profiles : -
+========================================
+mvn spring-boot:run -Dspring-boot.run.profiles=h2db
+
+
+Kill port in windows 
+======================================
+
+netstat -ano | findstr :8888
+taskkill /PID 16072 /F

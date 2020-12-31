@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "34358e57-1599-4916-9269-e7ec7d043cc3",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "0.Create new Tutorial",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Maven Tut#4 \",\r\n    \"description\": \"Tut#4 Description\",\r\n    \"published\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/erp_api/test/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"erp_api",
+						"test",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1.Retrieve a Tutorial by :id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/erp_api/test/retrive/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"erp_api",
+						"test",
+						"retrive",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2.Find all Tutorials which title contains keyword",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/erp_api/test/tutorials?title=ring",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"erp_api",
+						"test",
+						"tutorials"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "ring"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.Update a Tutorial by :id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"PostgreSQL Tut#2\",\r\n    \"description\": \"Tut#2 Description\",\r\n    \"published\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/erp_api/test/update/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"erp_api",
+						"test",
+						"update",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4.retrive-all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/erp_api/test/retrive-all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"erp_api",
+						"test",
+						"retrive-all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5.Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8888/erp_api/test/delete/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"erp_api",
+						"test",
+						"delete",
+						"9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

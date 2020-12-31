@@ -5,7 +5,7 @@
             %d{yyyy-MM-dd HH:mm:ss} [%thread] [correlationId=%X{correlationId}] %-5level %logger{36} - %msg%n
         </Property>
         <Property name="LOG_BASE_PATH">
-            E:\\Project\\logs
+            C:\\Temp\\logs
         </Property>
     </Properties>
     <Appenders>
