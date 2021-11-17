@@ -1,0 +1,78 @@
+{
+	"info": {
+		"_postman_id": "ae240456-b4f2-4ca2-a108-28126d5196ac",
+		"name": "erp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1.Sign-up",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Upload-Documents",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": [
+								"/C:/Users/M9014146/Pictures/download.jpg",
+								"/C:/Users/M9014146/Pictures/Software usage policy.pdf"
+							]
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8888/erp_api/document-handler/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"erp_api",
+						"document-handler",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.Get-List-of-Documents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8888/erp_api/document-handler/files",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"erp_api",
+						"document-handler",
+						"files"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
